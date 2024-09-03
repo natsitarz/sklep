@@ -54,7 +54,7 @@ main {
     width: 100%;
 }
 
-.productBottm {
+.productBottom {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -63,6 +63,12 @@ main {
     gap: 1rem;
     width: 100%;
     height: auto;
+    background-color: rgb(255, 255, 255);
+    background: fixed;
+    background-size: cover;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .productInfo {
