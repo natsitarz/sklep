@@ -3,7 +3,7 @@ function Nav() {
     <nav>
       <div>
         <img className="logo" src="./logo-clear-bg.png" alt="logo" />
-        <p className="name">Sklep firmowy zniczy</p>
+        <p className="name">Sklep Firmowy Zniczy</p>
         <a href="/">Strona główna</a>
         <a href="/produkty">Produkty</a>
         <a href="/kontakt">Kontakt</a>
