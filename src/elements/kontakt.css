@@ -1,0 +1,22 @@
+.contactContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    background-color: #414141;
+}
+
+.contactMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.contactSubText {
+    color: white;
+    font-size: 1.2rem;
+    padding: 4rem;
+    box-sizing: border-box;
+}

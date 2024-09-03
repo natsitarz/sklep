@@ -1,0 +1,100 @@
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+    background: url('./homePageClear.png');
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.productCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 30rem;
+    height: 20rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff94;
+    box-sizing: border-box;
+    color: black;
+    gap: 1rem;
+}
+
+.productName {
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+.productList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.productTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.productBottm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.productPhoto {
+    width: 10rem;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.infoBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.productButtons {
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.cartButton {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 0.2rem 0.6rem;
+}
