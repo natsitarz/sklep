@@ -19,4 +19,16 @@
     font-size: 1.2rem;
     padding: 4rem;
     box-sizing: border-box;
+    text-align: center;
+}
+
+.contactSubText>a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.contactSubText>a:hover {
+    color: #afafaf;
 }
