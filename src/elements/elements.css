@@ -19,6 +19,15 @@ nav>div {
     gap: 1rem;
 }
 
+nav>div>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav>div>a:hover {
+    color: #afafaf;
+}
+
 .logo {
     width: 64px;
     height: 64px;

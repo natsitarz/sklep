@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      <p>Sklep firmowy zniczy Santa Marozza © 2024</p>
+      <p>Sklep Firmowy Zniczy Santa Marozza © 2024</p>
     </footer>
   );
 }

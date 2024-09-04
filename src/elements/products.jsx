@@ -1,5 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
+import { updateCount } from "./nav";
 
 const supabase = createClient(
   "https://imqmogizdolnkixppplj.supabase.co",
@@ -21,15 +22,37 @@ function Products() {
     setOferta(data);
   }
 
-  function photoChange() {
-    const list = document.querySelectorAll("#color").forEach((item) => {
-      item.addEventListener("change", changePhoto);
-    });
-    function changePhoto(e) {
-      const photo = e.target.name + " " + e.target.value + ".png";
-      const img = document.getElementById(e.target.name);
-      img.src = photo;
-    }
+  function photoChange(e) {
+    const photo = e.target.name + " " + e.target.value + ".png";
+    const img = document.getElementById(e.target.name);
+    img.src = photo;
+  }
+
+  function addToCart(e) {
+    const productName = e.currentTarget
+      .closest(".productCard")
+      .querySelector(".productName").textContent;
+    console.log(productName);
+    const productPrice =
+      e.target.parentElement.parentElement.children[0].children[1].innerText;
+    console.log(productPrice);
+    const productColor =
+      e.target.parentElement.parentElement.children[2].children[0].value;
+    console.log(productColor);
+    const productQuantityValue =
+      e.target.parentElement.children[0].children[0].value;
+    console.log(productQuantityValue);
+    const product = {
+      name: productName,
+      price: productPrice,
+      color: productColor,
+      quantityValue: productQuantityValue,
+    };
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Produkt dodany do koszyka");
+    updateCount();
   }
 
   return (
@@ -44,20 +67,24 @@ function Products() {
       <main className="productBottom">
         {oferta.map((oferta) => (
           <div className="productCard" key={oferta.nazwa}>
-            <img
-              className="productPhoto"
-              src={oferta.nazwa + " " + oferta.default_color + ".png"}
-              alt={oferta.nazwa}
-              id={oferta.nazwa}
-            />
             <div className="productInfo">
               <div className="infoTop">
                 <p className="productName">{oferta.nazwa}</p>
               </div>
+              <img
+                className="productPhoto"
+                src={oferta.nazwa + " " + oferta.default_color + ".png"}
+                alt={oferta.nazwa}
+                id={oferta.nazwa}
+              />
               <div className="infoBottom">
-                <p className="productPrice">
-                  Cena: <b>{oferta.cena + "zł"}</b>
-                </p>
+                <div className="price">
+                  <p>Cena: </p>
+                  <p className="productPrice">
+                    <b>{oferta.cena.toFixed(2).replace(".", ",")}</b>
+                  </p>
+                  <p>zł</p>
+                </div>
                 <p className="productQuantity">
                   Dostępne: <b>{oferta.ilosc} szt.</b>
                 </p>
