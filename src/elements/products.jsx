@@ -70,6 +70,7 @@ function Products() {
             <div className="productInfo">
               <div className="infoTop">
                 <p className="productName">{oferta.nazwa}</p>
+                <span>{oferta.firma}</span>
               </div>
               <img
                 className="productPhoto"
@@ -83,7 +84,9 @@ function Products() {
                   <p className="productPrice">
                     <b>{oferta.cena.toFixed(2).replace(".", ",")}</b>
                   </p>
-                  <p>zł</p>
+                  <p>
+                    <b>zł</b>
+                  </p>
                 </div>
                 <p className="productQuantity">
                   Dostępne: <b>{oferta.ilosc} szt.</b>

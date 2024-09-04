@@ -20,6 +20,7 @@ function Koszyk() {
       </div>
       <div className="cartContent">
         <div className="productsCart">
+          {items.length === 0 && <p>Brak produktów w koszyku!</p>}
           {items.map((item, index) => (
             <div className="cartItem" key={index}>
               <div className="cartItemInfo">
